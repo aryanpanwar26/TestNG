@@ -1,13 +1,15 @@
 package extentreport;
 
+import org.testng.annotations.Test;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class extentreportex2 {
-
-	public static void main(String[] args) {
+	@Test
+	public void g() {
 		ExtentSparkReporter reporter = new ExtentSparkReporter("./reports/report.html");
 		reporter.config().setReportName("Automation test report");
 		reporter.config().setDocumentTitle("Test execution report");
